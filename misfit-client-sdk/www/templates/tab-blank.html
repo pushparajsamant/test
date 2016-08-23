@@ -1,0 +1,16 @@
+<ion-view view-title="Sync">
+  <ion-content>
+  	<button class="button button-block button-calm" ng-click="sync()" ng-disabled="isSyncing">Sync Start<ion-spinner icon="lines" ng-if="isSyncing"></ion-spinner></button>
+	<p style="min-height:50px">{{syncResult}}</p>
+
+<!--   	<button class="button button-block button-calm" ng-click="syncStart()" ng-disabled="isSyncing">Sync Start <ion-spinner icon="lines" ng-if="syncStarting"></button>
+	<ion-spinner icon="lines" ng-if="isSyncing"></ion-spinner><p style="min-height:50px">{{syncStartResult}}</p>
+	<button class="button button-block button-calm" ng-click="syncStop()" ng-disabled="!isSyncing">Sync Stop</button>
+	<p style="min-height:50px">{{syncStopResult}}</p> -->
+<!-- 		<button class="button button-block button-calm" ng-click="getCurrentData()">Get Current Data <ion-spinner icon="lines" ng-if="pairing"></button>
+	<div style="min-height:100px">{{data}}</div> -->
+<!-- 	<progress max="100" ng-value="percentage"> </progress>
+	<h1>{{steps}} STEPS</h1> -->
+
+  </ion-content>
+</ion-view>

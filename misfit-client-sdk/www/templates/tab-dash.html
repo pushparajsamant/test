@@ -1,0 +1,19 @@
+<ion-view view-title="Scan_Pair_Animate">
+  <ion-content class="padding">
+	<button class="button button-block button-calm" ng-click="scan()">Scan Devices <ion-spinner icon="lines" ng-if="scanning"></ion-spinner></button>
+	<ion-list>
+	<a class="item" ng-repeat="scanResult in availableDevices" ng-click="pair(scanResult.device)">{{scanResult.device.serialNumber}}</a>
+</ion-list>
+
+    <ion-spinner icon="lines" ng-if="pairing">Pairing</ion-spinner>
+	<div style="min-height:50px">{{pairResult}}</div>
+
+	<button class="button button-block button-calm" ng-click="unpair()">Unpair <ion-spinner icon="lines" ng-if="unpairing"></ion-spinner></button>
+	<div style="min-height:50px">{{unpairResult}}</div>
+	<button class="button button-block button-calm" ng-click="animate()">Animate<ion-spinner icon="lines" ng-if="animating"></ion-spinner></button><br>
+ 	<div style="min-height:50px">{{animateResult}}</div>
+
+	<button class="button button-block button-calm" ng-click="activate()">Activate Device</button><br>
+ 	<div style="min-height:100px">{{activateResult}}</div>
+  </ion-content>
+</ion-view>
